@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piperx-teleop"
+version = "0.1.0"
+description = "Quest controller teleoperation and synchronized RGB/action capture for dual PiperX"
+requires-python = ">=3.12"
+dependencies = ["numpy", "scipy", "opencv-python>=4.10,<5", "aiohttp>=3.10,<4", "cryptography"]
+
+[project.optional-dependencies]
+export = ["lerobot==0.4.2"]
+
+[project.scripts]
+piperx-teleop = "piperx_teleop.app:main"
+piperx-export = "piperx_teleop.export:main"
+
+[tool.setuptools.packages.find]
+include = ["piperx_teleop*"]
+
+[tool.setuptools.package-data]
+piperx_teleop = ["web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

@@ -1,0 +1,8 @@
+LIBRARY agx_receive
+EXPORTS
+    agx_rx_abi_version
+    agx_rx_drain
+    agx_rx_create
+    agx_rx_pop
+    agx_rx_stop
+    agx_rx_destroy

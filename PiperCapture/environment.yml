@@ -1,0 +1,14 @@
+name: piper-capture
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - scipy
+  - tk
+  - pytest
+  - pip:
+      - opencv-python>=4.10,<5
+      - python-can>=4.5,<5
+      - pyrealsense2==2.59.1.11053
+      - -e .

@@ -1,0 +1,34 @@
+{
+  "topology": "leader_follower_shared_can",
+  "record_hz": 30,
+  "poll_hz": 100,
+  "task": "dual arm manual demonstration",
+  "output": "output",
+  "feedback_timeout_s": 0.2,
+  "camera_timeout_s": 0.3,
+  "home_timeout_s": 30,
+  "sync": {
+    "delay_ms": 80,
+    "camera_tolerance_ms": 20,
+    "camera_span_ms": 25,
+    "state_tolerance_ms": 40
+  },
+  "realsense": {"dds": {"enabled": true, "domain": 0}},
+  "cameras": {
+    "head": {"model": "D555", "serial": "", "width": 896, "height": 504, "fps": 30, "latency_ms": 0},
+    "left_wrist": {"model": "D405", "serial": "", "width": 640, "height": 480, "fps": 30, "latency_ms": 0},
+    "right_wrist": {"model": "D405", "serial": "", "width": 640, "height": 480, "fps": 30, "latency_ms": 0}
+  },
+  "arms": {
+    "left": {
+      "interface": "agx_cando", "channel": "1", "firmware": "v189",
+      "tcp_offset": [0, 0, 0, 0, 0, 0],
+      "gripper_max_m": 0.07, "gripper_force_n": 1.0, "home_speed_percent": 5
+    },
+    "right": {
+      "interface": "agx_cando", "channel": "0", "firmware": "v189",
+      "tcp_offset": [0, 0, 0, 0, 0, 0],
+      "gripper_max_m": 0.07, "gripper_force_n": 1.0, "home_speed_percent": 5
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+    "control_hz":  60,
+    "record_hz":  30,
+    "task":  "dual arm manipulation",
+    "feedback":  {
+                     "sound":  true,
+                     "haptics":  true
+                 },
+    "output":  "outputs/episodes",
+    "input_timeout_s":  0.2,
+    "feedback_timeout_s":  0.15,
+    "camera_timeout_s":  0.25,
+    "max_position_tracking_error_m":  0.1,
+    "reset_timeout_s":  20,
+    "sync":  {
+                 "delay_ms":  80,
+                 "camera_tolerance_ms":  20,
+                 "camera_span_ms":  25,
+                 "state_tolerance_ms":  40,
+                 "action_max_age_ms":  100
+             },
+    "realsense":  {
+                      "dds":  {
+                                  "enabled":  true,
+                                  "domain":  0
+                              }
+                  },
+    "cameras":  {
+                    "head":  {
+                                 "model":  "D555",
+                                 "serial":  "",
+                                 "width":  896,
+                                 "height":  504,
+                                 "fps":  30,
+                                 "latency_ms":  0
+                             },
+                    "left_wrist":  {
+                                       "model":  "D405",
+                                       "serial":  "",
+                                       "width":  640,
+                                       "height":  480,
+                                       "fps":  30,
+                                       "latency_ms":  0
+                                   },
+                    "right_wrist":  {
+                                        "model":  "D405",
+                                        "serial":  "",
+                                        "width":  640,
+                                        "height":  480,
+                                        "fps":  30,
+                                        "latency_ms":  0
+                                    }
+                },
+    "arms":  {
+                 "left":  {
+                              "interface":  "agx_cando",
+                              "channel":  "1",
+                              "firmware":  "v189",
+                              "tcp_offset":  [
+                                                 0,
+                                                 0,
+                                                 0,
+                                                 0,
+                                                 0,
+                                                 0
+                                             ],
+                              "home_waypoints":  [
+
+                                                 ],
+                              "xr_to_base":  [
+                                                 [
+                                                     0,
+                                                     0,
+                                                     -1
+                                                 ],
+                                                 [
+                                                     -1,
+                                                     0,
+                                                     0
+                                                 ],
+                                                 [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ]
+                                             ],
+                              "workspace_min":  [
+                                                    0.05,
+                                                    -0.4,
+                                                    0.05
+                                                ],
+                              "workspace_max":  [
+                                                    0.6,
+                                                    0.4,
+                                                    0.65
+                                                ],
+                              "position_scale":  0.7,
+                              "max_speed_m_s":  0.12,
+                              "max_rotation_rad_s":  0.7,
+                              "gripper_max_m":  0.07,
+                              "gripper_force_n":  1.0,
+                              "speed_percent":  15,
+                              "reset_speed_percent":  10
+                          },
+                 "right":  {
+                               "interface":  "agx_cando",
+                               "channel":  "0",
+                               "firmware":  "v189",
+                               "tcp_offset":  [
+                                                  0,
+                                                  0,
+                                                  0,
+                                                  0,
+                                                  0,
+                                                  0
+                                              ],
+                               "home_waypoints":  [
+
+                                                  ],
+                               "xr_to_base":  [
+                                                  [
+                                                      0,
+                                                      0,
+                                                      -1
+                                                  ],
+                                                  [
+                                                      -1,
+                                                      0,
+                                                      0
+                                                  ],
+                                                  [
+                                                      0,
+                                                      1,
+                                                      0
+                                                  ]
+                                              ],
+                               "workspace_min":  [
+                                                     0.05,
+                                                     -0.4,
+                                                     0.05
+                                                 ],
+                               "workspace_max":  [
+                                                     0.6,
+                                                     0.4,
+                                                     0.65
+                                                 ],
+                               "position_scale":  0.7,
+                               "max_speed_m_s":  0.12,
+                               "max_rotation_rad_s":  0.7,
+                               "gripper_max_m":  0.07,
+                               "gripper_force_n":  1.0,
+                               "speed_percent":  15,
+                               "reset_speed_percent":  10
+                           }
+             }
+}

@@ -1,0 +1,2 @@
+recursive-include native *.cpp *.h *.def *.md
+include scripts/build_native.py

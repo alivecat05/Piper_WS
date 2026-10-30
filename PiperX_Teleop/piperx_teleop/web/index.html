@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PiperX Quest 遥操</title>
+<style>
+body{font:18px system-ui;background:#101419;color:#e6edf3;margin:30px;max-width:1000px}
+button{font:inherit;padding:14px 22px;cursor:pointer}canvas{display:block;width:100%;margin-top:20px}
+#status{white-space:pre-line;line-height:1.7}p{line-height:1.7}
+</style>
+<h1>PiperX 双臂遥操</h1>
+<p>B：开始录制 · A：结束录制<br>
+中指键：按住使能并控制对应机械臂，松开停在当前位置<br>
+食指扳机：按下闭合夹爪，松开张开（独立于中指键）</p>
+<p>松开两个中指键、等待录制保存完成后：Y 长按 1.5 秒复位；X 长按 2 秒保存当前初始位。<br>
+复位过程中：松开 Y，再按一次 Y 取消复位。</p>
+<p>挂脖采集：先用 USB 连接电脑并运行 teleop.cmd awake，无需 MQDH；确认离脸后手柄仍被追踪。<br>
+采集时看真实场景，三路 RGB 和录制状态显示在电脑窗口；头显保持追踪即可。</p>
+<button id="enter">启动手柄追踪</button>
+<p id="status">等待连接。启动后头显显示黑屏，这是正常的。</p>
+<canvas id="xr" hidden></canvas>
+<script type="module" src="/quest.js"></script>
+</html>
+

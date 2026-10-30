@@ -1,0 +1,14 @@
+.conda/
+.setup/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+outputs/
+output/
+datasets/
+config.json
+home.json

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=40.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-can-agx-cando"
+version = "0.1.0"
+description = "python-can plugin backed by cando.dll via ctypes"
+readme = "README.md"
+authors = [{ name = "科幻木影" }]
+license = { text = "MIT" }
+requires-python = ">=3.6"
+keywords = ["can", "python-can", "windows", "ctypes", "cando"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+dependencies = [
+    "python-can>=3.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/agilexrobotics/python-can-agx-cando"
+
+[project.entry-points."can.interface"]
+agx_cando = "agx_cando.bus:AgxCandoBus"
+
+[tool.setuptools.packages.find]
+include = ["agx_cando", "agx_cando.*"]
+
+[tool.setuptools.package-data]
+"agx_cando" = [
+    "bin/x32/*.dll",
+    "bin/x64/*.dll",
+]

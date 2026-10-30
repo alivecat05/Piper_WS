@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piper-capture"
+version = "0.1.0"
+description = "Manual PiperX demonstrations: synchronized RGB, state and next-state action"
+requires-python = ">=3.12"
+dependencies = ["numpy", "scipy", "opencv-python>=4.10,<5"]
+
+[project.optional-dependencies]
+export = ["lerobot==0.4.2"]
+
+[tool.setuptools.packages.find]
+include = ["piper_capture*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
