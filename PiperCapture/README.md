@@ -37,7 +37,7 @@ cd D:\Piper_WS\PiperCapture
 
 ## 数据与同步
 
-- 原始数据：`output/<task_name>/episode_001/`；初始位：`home.json`（模拟另存）。
+- 原始数据：`outputs/<task_name>/episode_001/`；初始位：`home.json`（模拟另存）。
 - 每段保存 `head.mp4`、`left_wrist.mp4`、`right_wrist.mp4`、`action.csv`、`samples.jsonl`、`manifest.json`，不再写 JPG。
 - 任务名和采集序号用于目录命名，不额外写进数据文件。旧的 `outputs/episodes/` 数据原样保留。
 - 三路视频第 N 帧 = CSV 第 N 行数据 = JSONL 第 N 行；视频丢帧处不补帧，真实间隔看时间戳。
@@ -59,7 +59,7 @@ cd D:\Piper_WS\PiperCapture
 
 输出 `datasets/pipercapture/`，LeRobot 0.4.2 / v3；支持新 MP4 和旧 JPG 录制，按缺帧切分，跳过未完成数据，拒绝混入模拟数据，不上传。
 
-默认递归读取 `output/`，也可 `--source output/pick_cup` 只导出一个任务；任务描述取自目录名。旧数据用 `--source outputs/episodes`。
+默认递归读取 `outputs/`，也可 `--source outputs/pick_cup` 只导出一个任务；任务描述取自目录名。旧数据用 `--source outputs/episodes`。
 
 ## Python 接口
 

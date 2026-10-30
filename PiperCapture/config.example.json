@@ -3,7 +3,7 @@
   "record_hz": 30,
   "poll_hz": 100,
   "task": "dual arm manual demonstration",
-  "output": "output",
+  "output": "outputs",
   "feedback_timeout_s": 0.2,
   "camera_timeout_s": 0.3,
   "home_timeout_s": 30,

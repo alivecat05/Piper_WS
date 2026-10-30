@@ -17,7 +17,7 @@ cd PiperCapture
 在窗口填写任务名、采集序号，点击“开始录制 / 结束保存”：
 
 ```text
-PiperCapture/output/pick_cup/episode_001/
+PiperCapture/outputs/pick_cup/episode_001/
   head.mp4
   left_wrist.mp4
   right_wrist.mp4
@@ -35,6 +35,6 @@ PiperCapture/output/pick_cup/episode_001/
 .\export.cmd
 ```
 
-默认读取 `PiperCapture/output/`，输出到 `PiperCapture/datasets/pipercapture/`。
+默认读取 `PiperCapture/outputs/`，输出到 `PiperCapture/datasets/pipercapture/`。
 
 仓库包含代码、测试、SDK 源码及许可证、配置示例和安装脚本；不包含本地 Conda、录制数据、证书、缓存及设备配置。

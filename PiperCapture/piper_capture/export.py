@@ -212,7 +212,7 @@ def convert(source, target, repo_id, allow_mock=False, image_mode=False, validat
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", default="output")
+    parser.add_argument("--source", default="outputs")
     parser.add_argument("--output", default="datasets/pipercapture")
     parser.add_argument("--repo-id", default="local/pipercapture")
     parser.add_argument("--allow-mock", action="store_true")

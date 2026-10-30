@@ -44,7 +44,7 @@ class Recorder:
             raise ValueError("任务名不能为空，也不能包含路径或 Windows 文件名禁用字符")
         path = self.root / task
         if path.resolve().parent != self.root.resolve():
-            raise ValueError("任务目录必须在 output 内")
+            raise ValueError("任务目录必须在 outputs 内")
         return path
 
     def next_index(self, task):
